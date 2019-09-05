@@ -1,4 +1,5 @@
 <?php
+//echo Ahoara si!!
 
 echo "El index.php que se debe ejecutar está dentro de la carpeta controller";
 echo "<br>";
