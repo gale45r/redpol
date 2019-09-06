@@ -6,3 +6,5 @@ echo "<br>";
 //primera llamada al controlador --> index.php dentro de la carpeta controller
 echo " controller/index.php ";
 //hola como andas gcgncgcgb> njkenwfjkenwjfkcewnjkdewnk
+header('Location: controller/index.php');
+?>

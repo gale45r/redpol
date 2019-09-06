@@ -7,7 +7,7 @@
 	$ok=Usuario::registrarUsuario($email,$nombre,$nivel);
 
 	$title = "Usuario Registrado";
-	$view_page="ejercicio_view.php";
-	include "../views/ejercicio_view.php";
+	$view_page="recuadro_muestra_view.php";
+    include '../views/bienvenido_view.php';
 
 ?>
