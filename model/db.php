@@ -4,7 +4,7 @@ class Conexion {
     private $servidor = "localhost";
     private $usuario = "root";
     private $contrasena = "";
-    private $based = "red_pol";
+    private $based = "prueba";
     private $conn;
 
     public function conectar() {
