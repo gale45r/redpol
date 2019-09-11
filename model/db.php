@@ -6,7 +6,7 @@ class Conexion {
     private $contrasena = "";
     private $based = "prueba";
     private $conn;
-
+//esto es un comentario
     public function conectar() {
         $this->conn = new mysqli(
                 $this->servidor, $this->usuario, $this->contrasena, $this->based
