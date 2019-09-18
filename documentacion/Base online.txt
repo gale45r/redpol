@@ -1,0 +1,15 @@
+Sige Base plantilla
+
+Username:da5nHrDeaE
+Database name:da5nHrDeaE
+Password:O9SNn9xMtH
+Server:remotemysql.com
+Port:3306
+------------------------------
+Base Sige online
+
+Username:ieXz2zdR8A
+Database name:ieXz2zdR8A
+Password:Mqlq3xL2mB
+Server:remotemysql.com
+Port:3306
