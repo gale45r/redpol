@@ -1,0 +1,44 @@
+Trabajo Práctico - Etapa 2 
+Pautas del trabajo 
+-	La entrega es obligatoria. 
+-	Puede hacerse en forma individual o en grupos de hasta tres personas.  
+ 
+Fecha de entrega:  
+04/10 - Se mostrará el funcionamiento  del trabajo en clase. 
+Entrega 
+●	Los archivos de las clases en PHP que resuelven el problema. 
+●	Archivo en PHP con la conexión a la Base de Datos a utilizar y del funcionamiento en general. 
+●	Script que permite importar la Base de Datos del modelo (la extensión debe ser *.msql). 
+●	Las clases deben contar con los siguientes métodos: 
+  
+Descripción del dominio de la aplicación: 
+RedPol es una red social de preguntas y respuestas. Los usuarios pueden crear ambas cosas (es decir, crear nuevas preguntas o crear respuestas para preguntas de otros usuarios), como así también votarlas mediante mecanismo de like/dislike. Las preguntas deben pertenecer al menos a una categoría. 
+A través de la aplicación se debe poder realizarse las siguientes funcionalidades: 
+●	Crear un nuevo usuario: indicando su nombre de usuario, contraseña. Debe registrarse fecha y hora de creación de la cuenta. 
+●	Agregar categoría: indicando su nombre y descripción. 
+●	Agregar pregunta: indicando las categorías a las que se relaciona, un título, una descripción de la pregunta. Debe registrarse el usuario que la realiza y hora y fecha de creación. 
+●	Agregar una respuesta: se indica pregunta que se responde, el texto de la respuesta, hora y fecha de creación. Debe registrarse el usuario que la realiza ●	Agregar un usuario como follower de otro. 
+●	Registrar Like/Dislikes a preguntas y respuestas: además se indica el usuario que realiza esa acción. 
+●	Registrar una categoría de interés para un usuario determinado. 
+●	Obtener todas las preguntas de una categoría: se indica una categoría y deben	 retornarse todas las preguntas que se realizaron y pertenecen a ese categoria. 
+●	Obtener preguntas relevantes para un usuario determinado:. Se considera relevante una pregunta cuando ésta pertenece a una categoría de interés para el usuario en cuestión. 
+●	Obtener las respuestas a una pregunta: se indica la pregunta y se retornan todas las respuestas ordenadas por cantidad de likes de mayor a menor. 
+●	Borrar una pregunta: elimina del sistema la pregunta y todas sus respuestas.	 ●	Conocer las preguntas que realizó un usuario. 
+●	Conocer las respuestas que dió un usuario. 
+ 
+ 
+Datos para cargar en la base: 
+ 
+Usuario 
+-	Adrian Acosta; Ac0st41234 {categoria de interes: IoT} 
+-	Blanca Bianconi; Bl4nc41234 {categoria de interes: Ciberseguridad} 
+ 
+Categoria 
+-	Ciberseguridad ; Preguntas relacionadas a Ciberseguridad 
+-	IoT ; Preguntas relacionadas a IoT 
+-	Medioambiente; Preguntas relacionadas al medioambiente 
+ 
+Pregunta  
+-	¿Qué tipo de tecnologia se usa en IoT? ; tecnología que sea  free. 
+{categoria: IoT, usuario: Adrian} 
+-	¿ De que manera podemos ayudar al medioambiente?;   Todo tipo de herramientas que no sean económicas. {categoria: Medioambiente, usuario:Blanca} 
