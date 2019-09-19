@@ -3,6 +3,6 @@
 	
 	$title = "Registrar Usuario";
 	$view_page="registroUsuario_view.php";
-	include "../views/ejercicio_view.php";
+	include "../views/bienvenido_view.php";
 	  
 ?>  

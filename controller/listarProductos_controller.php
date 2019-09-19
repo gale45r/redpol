@@ -4,5 +4,5 @@
 	//var_dump($productos);
 	$title = "Lista de productos";
 	$view_page="listarProductos_view.php";
-	include "../views/ejercicio_view.php";
+	include "../views/bienvenido_view.php";
 ?>

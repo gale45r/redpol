@@ -16,14 +16,17 @@ RedPol es una red social de preguntas y respuestas. Los usuarios pueden crear am
 A través de la aplicación se debe poder realizarse las siguientes funcionalidades: 
 ●	Crear un nuevo usuario: indicando su nombre de usuario, contraseña. Debe registrarse fecha y hora de creación de la cuenta. 
 ●	Agregar categoría: indicando su nombre y descripción. 
-●	Agregar pregunta: indicando las categorías a las que se relaciona, un título, una descripción de la pregunta. Debe registrarse el usuario que la realiza y hora y fecha de creación. 
-●	Agregar una respuesta: se indica pregunta que se responde, el texto de la respuesta, hora y fecha de creación. Debe registrarse el usuario que la realiza ●	Agregar un usuario como follower de otro. 
+●	Agregar pregunta: indicando las categorías a las que se relaciona, un título, una descripción de la pregunta. 
+Debe registrarse el usuario que la realiza y hora y fecha de creación. 
+●	Agregar una respuesta: se indica pregunta que se responde, el texto de la respuesta, hora y fecha de creación. Debe registrarse el usuario que la realiza 
+●	Agregar un usuario como follower de otro. 
 ●	Registrar Like/Dislikes a preguntas y respuestas: además se indica el usuario que realiza esa acción. 
 ●	Registrar una categoría de interés para un usuario determinado. 
-●	Obtener todas las preguntas de una categoría: se indica una categoría y deben	 retornarse todas las preguntas que se realizaron y pertenecen a ese categoria. 
+●	Obtener todas las preguntas de una categoría: se indica una categoría y deben retornarse todas las preguntas que se realizaron y pertenecen a ese categoria. 
 ●	Obtener preguntas relevantes para un usuario determinado:. Se considera relevante una pregunta cuando ésta pertenece a una categoría de interés para el usuario en cuestión. 
 ●	Obtener las respuestas a una pregunta: se indica la pregunta y se retornan todas las respuestas ordenadas por cantidad de likes de mayor a menor. 
-●	Borrar una pregunta: elimina del sistema la pregunta y todas sus respuestas.	 ●	Conocer las preguntas que realizó un usuario. 
+●	Borrar una pregunta: elimina del sistema la pregunta y todas sus respuestas.	 
+●	Conocer las preguntas que realizó un usuario. 
 ●	Conocer las respuestas que dió un usuario. 
  
  
