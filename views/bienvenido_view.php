@@ -7,15 +7,8 @@
     </head>
     <body>
 		<header>
-        <p style="text-align: center;"><?php
-        echo "Usuario: " . $_SESSION["usuario"];
-        if (!isset($_SESSION["usuario"]))
-            {
-                echo "Usuario: Invitado";
-            }
-            else{
-                echo "Usuario: " . $_SESSION["usuario"];
-            }?>
+        <p style="text-align: center;">
+        <?php include "../views/a.php"; ?>
         </p>
               <div class="menu">							
                 <li><a href="index.php">Inicio</a></li>
