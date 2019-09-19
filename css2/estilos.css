@@ -42,7 +42,11 @@ h1{
     border: 1px solid #cccccc;
     margin: 20px;
     padding: 20px;
-    position: absolute;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%);
+    
 }
 label{
     font-size: 16px;
