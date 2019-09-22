@@ -1,14 +1,14 @@
 
         <?php
-        session_start();
-        echo session_id();
+        //session_start();
+        //echo session_id();
 
-        if (!isset($_SESSION["u"]))
+        if (isset($_SESSION['prue']))
             {
-                echo "Usuario: Invitado";
+                echo "Usuario: " . $_SESSION['prue'];
             }
             else{
-                echo "Usuario: " . $_SESSION["u"];
+                echo "Usuario: Invitado";
             }
             //session_destroy();
             //$_SESSION["usuario"]="a";

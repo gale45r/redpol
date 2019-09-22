@@ -16,6 +16,6 @@
 			<input type='submit' value='Registrar'>
 			<input type='reset' value='Limpiar'/>
 		</div>
-
+		
 	</form> 
 </div>

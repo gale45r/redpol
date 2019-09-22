@@ -15,7 +15,16 @@
                 <li><a href="../controller/listarProductos_controller.php">Listar Productos</a></li>
                 <li><a href="#">Ver Carrito</a></li>
                 <li> <a href="../controller/loginUsuario_controller.php">Iniciar Sesi&oacute;n</a></li>
-                <li><a href="../controller/registroUsuario_controller.php">Registrarse</a></li>			
+                <li><a href="../controller/registroUsuario_controller.php">Registrarse</a></li>	
+                <?php
+                if (isset($_SESSION['prue']))
+                {
+                    echo '<li><a href="../controller/controlCerrarSession_controller.php">Salir</a></li>';
+                }
+                
+                ?>
+                
+                ?>		
             </ul>
         </div>
         <h1 id="title"><?php echo $title; ?></h1>	

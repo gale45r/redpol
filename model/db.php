@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class Conexion {
     private $servidor = "localhost";
     private $usuario = "root";
