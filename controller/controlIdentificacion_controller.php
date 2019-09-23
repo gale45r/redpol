@@ -2,11 +2,13 @@
 	include "../model/usuario_model.php";
 	$nombre = $_POST['nombre'];
 	
-        $ok=Usuario::IdentificarUsuario($nombre);
-        if($ok[0] == 1)//echo $producto[0];
+        $usuario=Usuario::IdentificarUsuario($nombre);
+        if(count($usuario) > 0)//echo $producto[0];
         {
             $title = "Usuario Identificado";
             $_SESSION['prue'] = $_POST['nombre'];
+            $_SESSION['id_Usuario'] = $usuario[0];
+
         }else{
             $title = "Usuario No existe";
             

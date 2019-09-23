@@ -3,9 +3,10 @@ include 'db.php';
 
 class Usuario{
 
-	public static function  registrarUsuario($email,$nombre,$nivel){
+	public static function  registrarUsuario($alias,$nombre,$email,$password,$nivel){
 		$ejemplo= (New Conexion())->conectar();
-		$consulta = "INSERT INTO  usuario( email,nombre,nivel) VALUES ('$email', '$nombre','$nivel')";
+		$consulta = "INSERT INTO  usuario( alias,nombre,email,password,nivel) 
+		VALUES ('$alias','$nombre','$email','$password','$nivel')";
 		$resultado = $ejemplo->query($consulta);
 		//$ejemplo->desconectar();
 		return $resultado;

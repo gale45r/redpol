@@ -22,10 +22,13 @@ Debe registrarse el usuario que la realiza y hora y fecha de creación.
 ●	Agregar un usuario como follower de otro. 
 ●	Registrar Like/Dislikes a preguntas y respuestas: además se indica el usuario que realiza esa acción. 
 ●	Registrar una categoría de interés para un usuario determinado. 
-●	Obtener todas las preguntas de una categoría: se indica una categoría y deben retornarse todas las preguntas que se realizaron y pertenecen a ese categoria. 
-●	Obtener preguntas relevantes para un usuario determinado:. Se considera relevante una pregunta cuando ésta pertenece a una categoría de interés para el usuario en cuestión. 
+
 ●	Obtener las respuestas a una pregunta: se indica la pregunta y se retornan todas las respuestas ordenadas por cantidad de likes de mayor a menor. 
 ●	Borrar una pregunta: elimina del sistema la pregunta y todas sus respuestas.	 
+
+●	Obtener todas las preguntas de una categoría: se indica una categoría y deben retornarse todas las preguntas que se realizaron y pertenecen a ese categoria. 
+●	Obtener preguntas relevantes para un usuario determinado:. 
+Se considera relevante una pregunta cuando ésta pertenece a una categoría de interés para el usuario en cuestión. 
 ●	Conocer las preguntas que realizó un usuario. 
 ●	Conocer las respuestas que dió un usuario. 
  

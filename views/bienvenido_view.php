@@ -12,13 +12,17 @@
         </p>
               <div class="menu">							
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="../controller/listarProductos_controller.php">Listar Productos</a></li>
-                <li><a href="#">Ver Carrito</a></li>
-                <li> <a href="../controller/loginUsuario_controller.php">Iniciar Sesi&oacute;n</a></li>
-                <li><a href="../controller/registroUsuario_controller.php">Registrarse</a></li>	
+                
                 <?php
-                if (isset($_SESSION['prue']))
+                if (!isset($_SESSION['prue']))
                 {
+                    echo '<li> <a href="../controller/loginUsuario_controller.php">Iniciar Sesi&oacute;n</a></li>';
+                    echo '<li><a href="../controller/registroUsuario_controller.php">Registrarse</a></li>';
+                }
+                else
+                {
+                    echo '<li><a href="../controller/listarPublicaciones_controller.php">Preguntas</a></li>';
+                    echo '<li><a href="../controller/agregarCategorias_controller.php">Agregar Categorias</a></li>';
                     echo '<li><a href="../controller/controlCerrarSession_controller.php">Salir</a></li>';
                 }
                 

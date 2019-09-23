@@ -2,11 +2,18 @@
 	<form method="post" action="../controller/controlRegistro_controller.php">
 		<fieldset id="centrar"> 
 		<legend> Registrar Usuario </legend>
+		
+				<label for="alias" >Alias:</label>
+				<input class="inputText" type="text" name="alias" id="alias" />
+
 				<label for="nombre" >Nombre:</label>
 				<input class="inputText" type="text" name="nombre" id="nombre" />
 				
 				<label for="mail">Mail:</label>
 				<input class="inputText" type="text" name="email" id="email" />
+
+				<label for="password">password:</label>
+				<input class="inputText" type="text" name="password" id="password" />
 
 				<label for="nivel">Nivel:</label>
 				<input class="inputText" type="number" name="nivel" id="nivel"/>

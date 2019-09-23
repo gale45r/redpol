@@ -1,4 +1,4 @@
-<h1> Productos</h1>
+<h1> Preguntas</h1>
         <table id= "inside">
             <tr>  
             <th>  ID PRODUCTO </th>

@@ -4,7 +4,8 @@ class Conexion {
     private $servidor = "localhost";
     private $usuario = "root";
     private $contrasena = "";
-    private $based = "prueba";
+    //private $based = "prueba";
+    private $based = "redpol_chiqui";
     private $conn;
 //esto es un comentario
     public function conectar() {
