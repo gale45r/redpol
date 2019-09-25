@@ -11,7 +11,7 @@
 	    switch ($option)
 		{ 
         case 'agregarRespuesta':
-			$producto=Producto::obtenerProducto($id);
+			//$producto=Producto::obtenerProducto($id);
 			//var_dump($producto);
 			$view_page="obtenerProducto_view.php";
 		  break;
