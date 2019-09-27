@@ -1,0 +1,121 @@
+/*Header*/
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/sativa.png');
+    font-family: sans-serif;
+    height: 100%;
+  }
+.menu{
+    background: #000;
+    list-style:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 5px;
+}
+.menu li{
+	float: left;
+}
+.menu li a{
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+.menuli a:hover {
+    background: #000;
+}
+ #title{    
+    text-align: center;
+}
+h1{ 
+    color: #1668c4;  
+}
+.menu > li > a:hover,
+.menu > li > a:focus {
+  text-decoration: none;
+  color: #444;
+  background-color: #f5f5f5;
+}
+.jumbotron{
+    background: #10076A;
+    color:#fff;
+    padding: 20px 0px;
+}
+.titulo-rp{
+    font-size: 40px;
+}
+.btn{
+    background: #10076A;
+    color:#fff;
+}
+ table {
+  border-collapse: collapse;
+  width: 100%;  
+}
+
+table,th, td {
+     border:1px solid #000;
+  
+}
+th {
+  background-color: #2b2b2b;
+  color: white;
+  text-align: left;
+  line-height: 20px;
+  padding-left:10px;
+}
+td {  
+  line-height: 20px;
+  vertical-align: bottom;  
+  padding-left:10px;
+}
+tr:hover {
+    background-color: #2b2b2b;
+    color:#fff;
+}
+footer {  
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 12px; 
+  color: #000; 
+  opacity: 0.5; 
+}
+#formulario{
+    width: 370px;
+    border: 1px solid #cccccc;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    
+    left: 50%;
+    transform: translate(-53%);
+    
+}
+label{
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+input{
+    font-size: 16px;
+    margin-bottom:20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box ;
+    border: 1px solid #cccccc;
+}
+imput:focus{
+    border: 1px solid #1668c4;
+}
+input[type="submit"],input[type="reset"]{
+    margin-bottom: 20px;
+    padding: 10px;
+    background:#0c6bd8; 
+    color:#ffffff;
+    border: none;
+}
+input[type="submit"],input[type="reset"]:hover{
+    background:#4a88f4;
+}
