@@ -143,6 +143,24 @@ INSERT INTO `usuario` (`id_usuario`, `alias`, `nombre`, `email`, `password`, `ni
 (7, 'r', 'r', 'r', 'r', 1, '2019-09-22 21:34:51');
 COMMIT;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `folowers`
+--
+
+DROP TABLE IF EXISTS `falowers`;
+CREATE TABLE IF NOT EXISTS `falowers` (
+  `id_folowers` int(10) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(10) NOT NULL,
+  `id_usuario_folowers` int(10) NOT NULL,
+  PRIMARY KEY (`id_folowers`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
