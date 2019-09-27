@@ -34,32 +34,32 @@
             <td class='boton'><?php echo $prod[1] ?></td>
             <td class='boton'><?php echo $prod[2] ?></td>
             <td class='boton'>
-                <a href="../controller/publicacionABM_controller.php?opcion=agregarRespuesta&id=<?php echo $prod[0]; ?>">
+                <a href="../controller/publicacionesABM_controller.php?opcion=agregarRespuesta&id=<?php echo $prod[0]; ?>">
                     <img class='boton' src='../img/edit.png' title="agregarRespuesta" style="width: 25px;height: 29px;"/>
                 </a>
             </td> 
             <td class='boton'>
-                <a href="../controller/publicacionABM_controller.php?opcion=follower&id=<?php echo $prod[0]; ?>">
+                <a href="../controller/publicacionesABM_controller.php?opcion=follower&id=<?php echo $prod[0].'&seguido='.$prod[4]; ?>">
                     <img class='boton' src='../img/edit.png' title="follower" style="width: 25px;height: 29px;"/>
                 </a>
             </td>   
             <td class='boton'>
-                <a href="../controller/publicacionABM_controller.php?opcion=like&id=<?php echo $prod[0]; ?>">
+                <a href="../controller/publicacionesABM_controller.php?opcion=like&id=<?php echo $prod[0]; ?>">
                     <img class='boton' src='../img/edit.png' title="like" style="width: 25px;height: 29px;"/>
                 </a>
             </td> 
             <td class='boton'>
-                <a href="../controller/publicacionABM_controller.php?opcion=dislike&id=<?php echo $prod[0]; ?>">
+                <a href="../controller/publicacionesABM_controller.php?opcion=dislike&id=<?php echo $prod[0]; ?>">
                     <img class='boton' src='../img/edit.png' title="dislike" style="width: 25px;height: 29px;"/>
                 </a>
             </td>    
             <td class='boton'>
-                <a href="../controller/publicacionABM_controller.php?opcion=listarRespuestas&id=<?php echo $prod[0]; ?>">
+                <a href="../controller/publicacionesABM_controller.php?opcion=listarRespuestas&id=<?php echo $prod[0]; ?>">
                     <img class='boton' src='../img/edit.png' title="listarRespuestas" style="width: 25px;height: 29px;"/>
                 </a>
             </td>             
             <td>
-                <a href="../controller/productoABM_controller.php?opcion=eliminarPregunta&id=<?php echo $prod[0]; ?>" >
+                <a href="../controller/publicacionesABM_controller.php?opcion=eliminarPregunta&id=<?php echo $prod[0]; ?>" >
                     <img src="../img/delete.png" title="Eliminar Pregunta" style="width: 15px;height: 19px;">
                 </a>
             </td>               

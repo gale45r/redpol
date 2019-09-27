@@ -1,11 +1,12 @@
 <?php
 include 'db.php';
 
-class Publicacion{
+class Respuesta{
 
-    public static function  nuevaPublicacion($texto,$id_usuario_FK,$id_categoria_FK,$descripcion){
+    public static function  nuevaRespuesta($texto,$id_pregunta_FK,$id_usuario_FK){
 		$ejemplo= (New Conexion())->conectar();
-		$consulta = "INSERT INTO  publicacion( texto,id_usuario_FK,id_categoria_FK,descripcion) VALUES ('$texto','$id_usuario_FK', '$id_categoria_FK','$descripcion')";
+		$consulta = "INSERT INTO  respuesta(texto,id_pregunta_FK,id_usuario_FK) 
+		VALUES ('$texto','$id_pregunta_FK', '$id_usuario_FK')";
 		$resultado = $ejemplo->query($consulta);
 		//$ejemplo->desconectar();
 		//return $res;
