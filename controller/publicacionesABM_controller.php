@@ -1,18 +1,19 @@
 <?php
 	//include "../model/respuesta_model.php";
-	$title = "Opciones de una Pregunta";
+	
 	 
 	  if(isset( $_GET['opcion'] ))
 	  {
 		$id=$_GET['id'];
 		$_SESSION['idPregunta']=$id;
-	    $option= $_GET['opcion'];
+		$option= $_GET['opcion'];
 	    //var_dump($id);
 	    //var_dump($option);
 	    switch ($option)
 		{ 
 		case 'agregarRespuesta':
 			include "../model/respuesta_model.php";
+			$title = "Nueva Respuesta";
 			//$producto=Producto::obtenerProducto($id);
 			//var_dump($producto);
 			$view_page="recuadro_muestra_view.php";
@@ -33,9 +34,10 @@
 		    
 		case 'like':
 			include "../model/util_model.php";
+
 			$id_usuario = $_SESSION['id_Usuario'];
-			$producto=Like::like($id_usuario,$id);
-			$title = "Like!";
+			$producto=Like::likes($id_usuario,$id);
+			$title = "Like a Pregunta!";
 			$view_page="recuadro_muestra_view.php";
 			include '../views/bienvenido_view.php';
 			break;
@@ -43,24 +45,50 @@
 		case 'dislike':
 			include "../model/util_model.php";
 			$id_usuario = $_SESSION['id_Usuario'];
-			$producto=Like::dislike($id_usuario,$id);
-			$title = "DisLike!";
+			$producto=Like::dislikes($id_usuario,$id);
+			$title = "DisLike a Pregunta!";
 			$view_page="recuadro_muestra_view.php";
 			include '../views/bienvenido_view.php';
 			break;
-
+			
+		
 		case 'listarRespuestas':
 		    include "../model/respuesta_model.php";
-			$producto=Producto::obtenerProducto($id);
+			$producto=Respuesta::getAllRespuestasByIdPregunta($id);
 			//var_dump($producto);
-			$view_page="obtenerProducto_view.php";
+			$title = "Lista de Respuestas";
+			$view_page="listarRespuestas_view.php";
+			include "../views/bienvenido_view.php";
+
+		  break;
+	  case 'likeR':
+		  include "../model/util_model.php";
+
+		  $id_usuario = $_SESSION['id_Usuario'];
+		  $producto=Like::likesR($id_usuario,$id);
+		  $title = "Like a Respuesta!";
+		  $view_page="recuadro_muestra_view.php";
+		  include '../views/bienvenido_view.php';
+		  break;
+		  
+	  case 'dislikeR':
+		  include "../model/util_model.php";
+		  $id_usuario = $_SESSION['id_Usuario'];
+		  $producto=Like::dislikesR($id_usuario,$id);
+		  $title = "DisLike a Respuesta!";
+		  $view_page="recuadro_muestra_view.php";
+		  include '../views/bienvenido_view.php';
 		  break;
 
 		case 'eliminarPregunta':
-		    $ok=Producto::eliminarProducto($id);
-			$done="La operacion se ha hecho con exito.";
-			$productos=Producto::verTodosLosProductos();
-			$view_page="listarProductos_view.php";
+		include "../model/publicacion_model.php";
+		    $ok=Publicacion::eliminarPublicacion($id);
+			$title = "Se elimino todas las respuestas y preguntas";
+		    $view_page="recuadro_muestra_view.php";
+		    include '../views/bienvenido_view.php';
+			// $done="La operacion se ha hecho con exito.";
+			// $productos=Producto::verTodosLosProductos();
+			// $view_page="listarProductos_view.php";
 			break;
 			
 		}

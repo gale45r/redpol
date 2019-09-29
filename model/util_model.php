@@ -16,7 +16,7 @@ class Follower{
 
 class Like{
 
-    public function  like($id_usuario,$id){
+    public static function  likes($id_usuario,$id){
         $ejemplo= (New Conexion())->conectar();
         $consulta = "INSERT INTO  likee(id_Usuario,id_Pregunta) 
         VALUES ('$id_usuario','$id')";
@@ -24,9 +24,25 @@ class Like{
         //$ejemplo->desconectar();
         //return $res;
     }
-    public static function  dislike($id_usuario,$id){
+    public static function  dislikes($id_usuario,$id){
         $ejemplo= (New Conexion())->conectar();
         $consulta = "INSERT INTO  dislike(id_Usuario,id_Pregunta) 
+        VALUES ('$id_usuario','$id')";
+        $resultado = $ejemplo->query($consulta);
+        //$ejemplo->desconectar();
+        //return $res;
+    }
+    public static function  likesR($id_usuario,$id){
+        $ejemplo= (New Conexion())->conectar();
+        $consulta = "INSERT INTO  likee(id_Usuario,id_Respuesta) 
+        VALUES ('$id_usuario','$id')";
+        $resultado = $ejemplo->query($consulta);
+        //$ejemplo->desconectar();
+        //return $res;
+    }
+    public static function  dislikesR($id_usuario,$id){
+        $ejemplo= (New Conexion())->conectar();
+        $consulta = "INSERT INTO  dislike(id_Usuario,id_Respuesta) 
         VALUES ('$id_usuario','$id')";
         $resultado = $ejemplo->query($consulta);
         //$ejemplo->desconectar();

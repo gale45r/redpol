@@ -1,7 +1,9 @@
+
 <h1> Preguntas</h1>
         <table id= "inside">
             <tr>  
             <th>  ID </th>
+            <th>  USUARIO</th>
             <th>  PREGUNTA</th>
             <th>  Descripcion</th>
             <th>  CATEGORIA</th>
@@ -20,11 +22,20 @@
         {//var_dump($prod);?>
         <tr>
             <td class='boton'><?php echo $prod[0] ?></td>
+            <td class='boton'><?php 
+            
+            foreach($usuarios as $struct) {
+                if ($prod[4] == $struct[0]) {
+                    echo $struct[1];
+                    break;
+                }
+            }
+             ?></td>
             <td class='boton'><?php echo $prod[3] ?></td>
             <td class='boton'><?php echo $prod[6] ?></td>
             <td class='boton'><?php 
             
-            foreach($_SESSION['categorias'] as $struct) {
+            foreach($categorias as $struct) {
                 if ($prod[5] == $struct[0]) {
                     echo $struct[1];
                     break;
@@ -67,3 +78,59 @@
         <?php } ?>
         </table>
         </div>
+
+    <form method="post" action="../controller/listarPublicaciones_controller.php">
+        <label for="categoria">Listar todas las preguntas de la Categoria:</label>
+        <select id="id_categoria" name="id_categoria">
+        <?php 
+        foreach ($categorias as $cate){ ?>
+        <option value="<?php echo $cate[0]; ?>"><?php echo $cate[1]; ?></option> 
+        <?php } ?>
+        </select>
+        <input type="hidden" id="opc" name="opc" value="1">
+        <input type='submit' value='Filtrar'>
+    </form>
+
+    <form method="post" action="../controller/listarPublicaciones_controller.php">
+        <label for="categoria">Listar todas las preguntas relevantes de la Categoria:</label>
+        <select id="id_usu" name="id_usu">
+        <?php 
+        foreach ($usuarios as $u){ ?>
+        <option value="<?php echo $u[0]; ?>"><?php echo $u[1]; ?></option> 
+        <?php } ?>
+        </select>
+        <select id="id_categoria" name="id_categoria">
+        <?php 
+        foreach ($categorias as $cate){ ?>
+        <option value="<?php echo $cate[0]; ?>"><?php echo $cate[1]; ?></option> 
+        <?php } ?>
+        </select>
+        <input type="hidden" id="opc" name="opc" value="2">
+        <input type='submit' value='Filtrar'>
+    </form>
+
+    <form method="post" action="../controller/listarPublicaciones_controller.php">
+        <label for="categoria">Listar todas las preguntas de un usuario:</label>
+        <select id="id_usu" name="id_usu">
+        <?php 
+        foreach ($usuarios as $u){ ?>
+        <option value="<?php echo $u[0]; ?>"><?php echo $u[1]; ?></option> 
+        <?php } ?>
+        </select>
+        <input type="hidden" id="opc" name="opc" value="3">
+        <input type='submit' value='Filtrar'>
+    </form>
+
+    <form method="post" action="../controller/listarPublicaciones_controller.php">
+        <label for="categoria">Listar todas las respuestas de un usuario:</label>
+        <select id="id_usu" name="id_usu">
+        <?php 
+        foreach ($usuarios as $u){ ?>
+        <option value="<?php echo $u[0]; ?>"><?php echo $u[1]; ?></option> 
+        <?php } ?>
+        </select>
+        <input type="hidden" id="opc" name="opc" value="4">
+        <input type='submit' value='Filtrar'>
+    </form>
+
+</form>

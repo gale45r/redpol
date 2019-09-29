@@ -3,11 +3,12 @@
 	$nombre = $_POST['nombre'];
 	
         $usuario=Usuario::IdentificarUsuario($nombre);
-        if(count($usuario) > 0)//echo $producto[0];
+        if($usuario != null)//echo $producto[0];
         {
             $title = "Usuario Identificado";
             $_SESSION['prue'] = $_POST['nombre'];
             $_SESSION['id_Usuario'] = $usuario[0];
+           // echo $_SESSION['id_Usuario'];
 
         }else{
             $title = "Usuario No existe";

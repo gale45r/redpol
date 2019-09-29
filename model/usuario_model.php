@@ -13,7 +13,7 @@ class Usuario{
 	}
 	public static function  IdentificarUsuario($nombre){
 		$conexion= (New Conexion())->conectar();
-		$consulta = "SELECT count(nombre) FROM usuario WHERE nombre LIKE '$nombre'";
+		$consulta = "SELECT * FROM usuario WHERE nombre LIKE '$nombre'";
 		$ok = $conexion->query($consulta)->fetch_row();
 		return $ok;
 	}

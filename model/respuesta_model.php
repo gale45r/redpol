@@ -9,7 +9,7 @@ class Respuesta{
 		VALUES ('$texto','$id_pregunta_FK', '$id_usuario_FK')";
 		$resultado = $ejemplo->query($consulta);
 		//$ejemplo->desconectar();
-		//return $res;
+		return $resultado;
 	}
 
 
@@ -20,7 +20,13 @@ class Respuesta{
 		//$ejemplo->desconectar();
 		return $res;
 	}
-
+	public static function  getAllRespuestasByIdPregunta($id){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT * FROM respuesta where id_pregunta_FK = '$id'");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
 
 	public static function agregarProducto($nombre,$descrip,$precio){
 		$ejemplo= (New Conexion())->conectar();

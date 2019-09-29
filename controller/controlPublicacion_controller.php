@@ -6,7 +6,7 @@
 	$descripcion = $_POST['descripcion'];
 	$id_usuario_FK = $_SESSION['id_Usuario'];
 	$id_categoria_FK = $_POST['id_categoria'];
-	
+	echo $_SESSION['id_Usuario'];
 	
 	$ok=Publicacion::nuevaPublicacion($texto,$id_usuario_FK,$id_categoria_FK,$descripcion);
 

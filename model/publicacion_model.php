@@ -19,8 +19,35 @@ class Publicacion{
 		//$ejemplo->desconectar();
 		return $res;
 	}
-
-
+	public static function  verTodasLasPublicacionesFiltradas($id_caregoria){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT * FROM publicacion where id_categoria_FK = '$id_caregoria'");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
+	public static function  verTodasLasPublicacionesFiltradasUsu($id_caregoria,$id_usuario_FK){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT * FROM publicacion where id_categoria_FK = '$id_caregoria' and id_usuario_FK='$id_usuario_FK'");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
+	public static function  verTodasLasPublicacionesByUsu($id_usuario_FK){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT * FROM publicacion where id_usuario_FK='$id_usuario_FK'");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
+	public static function  verTodasLasRespuestasByUsu($id_usuario_FK){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT * FROM respuesta where id_usuario_FK='$id_usuario_FK'");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
+	
 	public static function agregarProducto($nombre,$descrip,$precio){
 		$ejemplo= (New Conexion())->conectar();
 		$ok=Producto::igualProducto($nombre,$descrip,$precio);
@@ -45,7 +72,20 @@ class Publicacion{
 		//$ejemplo->desconectar();
 	}
 
-
+	public static function  verTodasLasCategorias(){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT * FROM categoria");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
+	public static function  verTodosUsuarios(){
+		$ejemplo= (New Conexion())->conectar();
+		$resultado = $ejemplo->query("SELECT id_usuario,alias FROM usuario");
+		$res= $resultado->fetch_all();
+		//$ejemplo->desconectar();
+		return $res;
+	}
 	public static function  nuevoProducto($nombre,$descrip,$precio){
 		$ejemplo= (New Conexion())->conectar();
 		$consulta = "INSERT INTO  producto( id, nombre, descripcion, precio) VALUES ('','$nombre', '$descrip','$precio')";
@@ -63,10 +103,16 @@ class Publicacion{
 		//$ejemplo->desconectar();
 	}
 
-	public static function eliminarProducto($id){
+	public static function eliminarPublicacion($id){
+		//elimino respuestas
 		$conexion= (New Conexion())->conectar();
-		$consulta = "DELETE FROM 	producto WHERE id= '$id'";
-		$ok = $conexion->query($consulta);
+		$consulta = "DELETE FROM respuesta WHERE id_pregunta_FK= '$id'";
+		$ok1 = $conexion->query($consulta);
+		//elimino pregunta
+		$conexion= (New Conexion())->conectar();
+		$consulta = "DELETE FROM publicacion WHERE id_publicacion= '$id'";
+		$ok2 = $conexion->query($consulta);
+
 		//$ejemplo->desconectar();	}
 	}
 
