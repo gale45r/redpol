@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 // include "../model/categoria_model.php";
 // $categorias=Categoria::verTodasLasCategorias();

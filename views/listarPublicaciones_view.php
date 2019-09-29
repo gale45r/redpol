@@ -7,8 +7,7 @@
             <th>  PREGUNTA</th>
             <th>  Descripcion</th>
             <th>  CATEGORIA</th>
-            <th>  LIKES</th>
-            <th>  DisLIKES</th>
+           
             <th>  Preguntas</th>
             <th>
                 <a href="../controller/publicacionAlta_controller.php" >
@@ -42,8 +41,7 @@
                 }
             }
              ?></td>
-            <td class='boton'><?php echo $prod[1] ?></td>
-            <td class='boton'><?php echo $prod[2] ?></td>
+            
             <td class='boton'>
                 <a href="../controller/publicacionesABM_controller.php?opcion=agregarRespuesta&id=<?php echo $prod[0]; ?>">
                     <img class='boton' src='../img/edit.png' title="agregarRespuesta" style="width: 25px;height: 29px;"/>

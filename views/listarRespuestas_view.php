@@ -3,8 +3,7 @@
             <tr>  
             <th>  ID </th>
             <th>  Respuesta</th>
-            <th>  LIKES</th>
-            <th>  DisLIKES</th>
+           
             <th>  Fecha/hora</th>
     
             </tr>
@@ -14,8 +13,7 @@
         <tr>
             <td class='boton'><?php echo $prod[0] ?></td>
             <td class='boton'><?php echo $prod[1] ?></td>
-            <td class='boton'><?php echo $prod[4] ?></td>
-            <td class='boton'><?php echo $prod[5] ?></td>
+            
             <td class='boton'><?php echo $prod[6] ?></td>
             <td class='boton'>
                 <a href="../controller/publicacionesABM_controller.php?opcion=likeR&id=<?php echo $prod[0]; ?>">
