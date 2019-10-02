@@ -151,9 +151,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `alias`, `nombre`, `email`, `password`, `nivel`, `Fecha_registro`) VALUES
-(1, 'chiqui', 'chiquito', 'chiquito@gmail.com', '', 31, NULL),
-(2, 'moishe', 'ariel', 'arielgaletti@hotmail.com', '', 1, NULL),
-(7, 'r', 'r', 'r', 'r', 1, '2019-09-22 21:34:51'),
+(1, 'chiqui', 'chiquito', 'chiquito@gmail.com', '', 1, '2019-09-22 21:34:51'),
+(2, 'moishe', 'ariel', 'arielgaletti@hotmail.com', '', 1, '2019-09-22 21:34:51'),
+(7, 'aaa', 'ariel', 'mirarluar@gmail.com', '', 1, '2019-09-22 21:34:51'),
 (8, 'a', 'a', 'a', 'a', 1, '2019-09-29 07:50:07');
 COMMIT;
 
